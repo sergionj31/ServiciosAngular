@@ -1,0 +1,19 @@
+<p>proyectos works!</p>
+
+<form class="m-3">
+    <div class="form-group">
+        <label class="mr-2" for="nombre">Nombre de proyecto</label>
+        <input type="text" [(ngModel)]="inputNombre" name="nombre" placeholder="Nombre" class="form-control"/>
+        <br>
+        <label class="mr-2" for="presupuesto">Presupuesto de proyecto</label>
+        <input type="text" [(ngModel)]="inputPresupuesto" name="presupuesto" placeholder="Presupuesto" class="form-control"/>
+        <br>
+        <input type="submit" value="Añadir" class="btn btn-primary" (click)="agregar()"/>
+    </div>
+</form>        
+
+<ul>
+    <li *ngFor="let p of this.arrayProyecto; let i=index">
+        {{ i }}: {{ p.nombre }} - {{ p.presupuesto }}
+    </li>
+</ul>
